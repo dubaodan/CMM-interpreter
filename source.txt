@@ -1,0 +1,260 @@
+/*
+int a = 1+2*3-4/5,r=1,s;
+int b = 1 + a++ +1+1+1;
+int c =2;
+int d = c;
+real e = 1;
+*/
+
+//从main开始执行，func1不被执行
+void func1(){
+    if( 1<2 || 3>4 && 3<>8 ) {
+        //return;
+    }
+    int d =1;
+    int a[3]={8,9,0};
+    real d3 = 1.1;
+    a[2]= a[1]*a[0]+9;
+    int d2[4] = {d,2,3};
+
+    while(d<a[2]){
+        d++;
+        //break;
+    }
+}
+
+int global = 666;
+
+real func2(int a,int b,real c){
+    c += a/b;
+    return c;
+}
+
+//计算i的阶乘
+int jiecheng(int i){
+    if(i ==1){
+        return 1;
+    }
+    int recursive = jiecheng(i-1);
+    return i*recursive;
+}
+
+int main(){
+    int arr[1] = {1};
+    arr[2] = 3;
+    int dbdarray[20] = {2,15,34312,4,34,6,24,234,2,134,21,6,786,2,3423,5,3,234,113,91};
+
+    //获取输入
+    int get = 0;
+    get = scan();
+    print(get);
+
+    //基本函数调用
+    real a = func2(1,2,1.2)+1;
+    print(a);
+    int c =1-2+3;
+
+    //测试数组下标（不能为浮点数）
+    //print(dbdarray[a]);
+
+    //for循环
+    int iii = 0;
+    for (iii = 0;iii<20;iii++){
+        if (iii>0){
+            iii++;
+        }
+    }
+
+    //函数递归调用
+    int result = jiecheng(10);
+    print(result);
+
+    //对数组进行冒泡排序
+    int change = 0;
+    int i = 0;
+    for (i = 0;i<19;i++){
+        change = 0;
+        int j = 0;
+        for (j = 19;j>i;j--){
+            if (dbdarray[j]<dbdarray[j-1]) {
+                int temp = dbdarray[j];
+                int temp1 = dbdarray[j-1];
+                dbdarray[j] = temp1;
+                dbdarray[j-1] = temp;
+                change= 1;
+            }
+        }
+        if (change <> 1){
+            int k =0;
+            for (k=0;k<20;k++){
+                print (dbdarray[k]);
+            }
+            return 0;
+        }
+    }
+    return 0;
+
+    //控制语句测试
+    for(a =0;a<9;a++){
+        a+=2;
+        break;
+    }
+
+    //大型嵌套
+    if(1>2 && a>0){
+        int i=7;
+        if(2>i){
+            i++;
+            while(i<50){
+                i++;
+                break;
+                i = i+5;
+            }
+            a += 10-i;
+        }
+        i--;
+    }else{
+        int i=2;
+        int m=i*100/5;
+        do{
+            i *= 1+2;
+            i --;
+        }while(i >= 10*m);
+        int k =3;
+    }
+    int m =1;
+}
+/*
+void bag(){
+
+  int m,n;
+  scan(n); // number
+  scan(m); // bag volume
+
+  int v[n],c[n]; // value cost
+
+  int i = 0;
+  while(i < n){
+    scanf(c[i]);
+    scanf(v[i]);
+    i++;
+  }
+
+  int a[m+1];
+  i = 0;
+  while(i <= m ){
+    a[i] = 0;
+    i++;
+  }
+
+  // core
+  i = 0;
+  while(i < n){
+    int j = m;
+    while(j >= c[i]){
+      if(a[j] < a[j - c[i]] + v[i])
+        a[j] = a[j - c[i]] + v[i];
+      j = j - 1;
+    }
+    i = i + 1;
+  }
+
+
+  // print
+  print(a[m]);
+}
+*/
+/*
+void main()
+{
+	int i = 0;
+	while (i < 12)
+	{
+		if (i < 3)
+		{
+			int a;
+			for (a = 2; a < 8; a++)
+			{
+				int i = 12;
+				i = i - 3;
+				int b = 2;
+				do {
+					b *= 2;
+				} while (b < 30);
+			}
+		}
+		else
+		{
+			int b = 12;
+			while (b < 3)
+			{
+				b += 10;
+			}
+			if (i > 10) {
+				i++;
+			}
+			i++;
+		}
+	}
+}
+*/
+/*
+void func(int x, real y){
+    int a = 1;
+    int b = 2-a;
+    if(a==b){
+	    for(i=0;i<100;i++){
+		    while( i> a/b*3-2/(a-3)){
+			    if(i<123){
+			        int a, b, c =1;
+			        char str[100] = "asdbfcaoje" ;
+			    }else{
+				        while(str[1] <> 50 && str[i+1] >= 60){
+                         //continue;
+                            int dzw = 0;
+       				        dzw++;
+       				        dzw /= dzw-- +1.2;
+					        func(1,1.1);
+					        func(a,b);
+
+    					    continue;
+
+
+				        }
+				    break;
+			    }
+		    }
+	    }
+    }
+    return;
+}
+
+int func2(char *c){
+    int a=0x234,b=0234,c=123e-3,d=234.123123;
+
+    int a = 2*3**3,b=a--,c=a=23;
+    char q[]="asdfghjkl;'\][=)(*&^%$#@!"; // it is legal due to the syntax sugar
+    char z[3]="12";		// it is legal with warning
+
+    int ccc[100][200] = {
+	    {1,2,3},
+	    {4,5,6},
+	    {7,8,9}
+    };
+    int *d = ccc[1][1];
+    print(ccc[1][2]);
+    real a[5]={1,(((0000))),scan(QAQ),afsdf23,(1+1)*1+1};
+
+
+    return 0;
+}
+
+void *(*foo)();
+int *(**doo(int* i)());
+
+void a(int b,int c){
+     void *(a(int));
+     a(b);
+}
+
+*/
